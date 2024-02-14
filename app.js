@@ -113,12 +113,52 @@
 
 //  packages
 
-const _ = require("lodash")
+// const _ = require("lodash")
 
-const items = [1, [2, [3, [4, [5]]]]]
+// const items = [1, [2, [3, [4, [5]]]]]
 
-const newItems = _.flattenDeep(items)
+// const newItems = _.flattenDeep(items)
 
-console.log(newItems);
+// console.log(newItems);
 
 
+
+
+//  setTimeout and setInterval
+
+// console.log("first");
+// setTimeout(() => {
+
+
+//     console.log("second"); // cz its asynch so it will get printed after third
+    
+// }, 0);
+
+// console.log("third");
+
+
+
+//  setInterval
+
+// console.log("first");
+
+// setInterval(() => {
+//     console.log("second");
+// }, 2000)
+
+// console.log("third");
+
+
+//  events emitter 
+
+
+const eventEmitter = require("events")
+
+const customEmitter = new EventEmitter()
+
+
+customEmiter.on("response", () => {
+    console.log("data received");
+})
+
+customEmiter.emit("response")
